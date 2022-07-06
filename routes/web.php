@@ -13,14 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['prefix'=>'admin'], function(){
+  
+    Route::redirect('/', '/login');
+
+    Auth::routes();
+    // Logout
+    Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout')->name('logout');
+    Route::group(['middleware' => 'auth'], function () {
+        Route::resource('user', 'App\Http\Controllers\Admin\UserController');
+        Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);
+        Route::put('profile', ['as' => 'profile.update', 'uses' => 'App\Http\Controllers\ProfileController@update']);
+        Route::get('upgrade', function () {return view('pages.upgrade');})->name('upgrade'); 
+        Route::get('map', function () {return view('pages.maps');})->name('map');
+        Route::get('icons', function () {return view('pages.icons');})->name('icons'); 
+        Route::get('table-list', function () {return view('pages.tables');})->name('table');
+        Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
+        //Dashboard
+        Route::get('/home', 'App\Http\Controllers\Admin\HomeController@home')->name('adminHome');
+    });
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
