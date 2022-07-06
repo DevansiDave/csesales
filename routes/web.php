@@ -43,5 +43,7 @@ Route::group(['prefix'=>'admin'], function(){
         Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'App\Http\Controllers\ProfileController@password']);
         //Dashboard
         Route::get('/home', 'App\Http\Controllers\Admin\HomeController@home')->name('adminHome');
+        // Manage Sales Person
+        Route::resource('SalesPerson','App\Http\Controllers\Admin\SalesPersonController');
     });
 });

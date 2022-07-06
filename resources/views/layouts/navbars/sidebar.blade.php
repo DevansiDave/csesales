@@ -84,6 +84,11 @@
                         <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('SalesPerson.index') }}">
+                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Manage Sales Person') }}
+                    </a>
+                </li>
             </ul>
             <!-- Divider -->
             <hr class="my-3">
