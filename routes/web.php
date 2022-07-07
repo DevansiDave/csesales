@@ -45,5 +45,16 @@ Route::group(['prefix'=>'admin'], function(){
         Route::get('/home', 'App\Http\Controllers\Admin\HomeController@home')->name('adminHome');
         // Manage Sales Person
         Route::resource('SalesPerson','App\Http\Controllers\Admin\SalesPersonController');
+        // Services category
+        Route::resource('ServicesCategory','App\Http\Controllers\Admin\ServicesCategoryController');
+        // Services sub category
+        Route::resource('ServicesSubCategory','App\Http\Controllers\Admin\ServicesSubCategoryController');
+        // Payment terms
+        Route::resource('PaymentTerms','App\Http\Controllers\Admin\PaymentTermsController');
+        // Services
+        Route::resource('Services','App\Http\Controllers\Admin\ServicesController');
     });
 });
+
+//ajax call for subcategory dropdown
+    Route::get('subcategory/ajax/{id}',array('as'=>'subcategory.ajax','uses'=>'App\Http\Controllers\Admin\ServicesController@subcategoryAjax'));

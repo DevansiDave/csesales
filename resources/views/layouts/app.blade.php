@@ -50,13 +50,6 @@
                 $("#alertMessage").hide();
                 }, 3000);
             });
-
-            $(function() {
-                $('#upload-demo').hide();
-                $('#upload').change(function(){
-                    $('#upload-demo').show(); 
-                });
-            });
         </script>
         
     </head>
@@ -76,6 +69,7 @@
             @include('layouts.footers.guest')
         
         @stack('js')
+        @stack('page_scripts')
     </body>
 
     <style type="text/css">

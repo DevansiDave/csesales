@@ -86,7 +86,27 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('SalesPerson.index') }}">
-                        <i class="ni ni-tv-2 text-primary"></i> {{ __('Manage Sales Person') }}
+                        <i class="ni ni-single-02 text-primary"></i> {{ __('Manage Sales Person') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('ServicesCategory.index') }}">
+                        <i class="fa fa-ellipsis-h text-primary"></i> {{ __('Services Category') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('ServicesSubCategory.index') }}">
+                        <i class="fa fa-bars text-primary"></i> {{ __('Services Sub Category') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('PaymentTerms.index') }}">
+                        <i class="fa fa-credit-card text-primary"></i> {{ __('Payment Terms') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('Services.index') }}">
+                        <i class="fa fa-server text-primary"></i> {{ __('Services') }}
                     </a>
                 </li>
             </ul>
