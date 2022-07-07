@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('adminHome') }}">
-            <h1>{{ Auth::user()->name }} </h1>
+            <h1>Logo</h1>
             {{-- <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="..."> --}}
         </a>
         <!-- User -->
@@ -107,6 +107,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('Services.index') }}">
                         <i class="fa fa-server text-primary"></i> {{ __('Services') }}
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('Company.index') }}">
+                        <i class="fa fa-building-o text-primary"></i> {{ __('Company') }}
                     </a>
                 </li>
             </ul>

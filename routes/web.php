@@ -53,6 +53,8 @@ Route::group(['prefix'=>'admin'], function(){
         Route::resource('PaymentTerms','App\Http\Controllers\Admin\PaymentTermsController');
         // Services
         Route::resource('Services','App\Http\Controllers\Admin\ServicesController');
+        // Company
+        Route::resource('Company','App\Http\Controllers\Admin\CompanyController');
     });
 });
 
