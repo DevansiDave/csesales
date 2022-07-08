@@ -6,8 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('adminHome') }}">
-            <h1>Logo</h1>
-            {{-- <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="..."> --}}
+            <img src="{{ asset('assets') }}/img/brand/cselogo.jpg" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -85,40 +84,110 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('SalesPerson.index') }}">
-                        <i class="ni ni-single-02 text-primary"></i> {{ __('Manage Sales Person') }}
+                    <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                        <i class="fa fa-building-o text-primary"></i>
+                        <span class="nav-link-text">Company</span>
                     </a>
+                    <div class="collapse" id="navbar-examples">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('Company.index') }}">
+                                    <!-- <i class="fa fa-building-o text-primary"></i> --> {{ __('Companies') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('Contact.index') }}">
+                                    <!-- <i class="fa fa-users text-primary"></i> --> {{ __('Contact') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <!-- <i class="fa fa-users-cog text-primary"></i> --> {{ __('Import Contacts') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('ServicesCategory.index') }}">
-                        <i class="fa fa-ellipsis-h text-primary"></i> {{ __('Services Category') }}
+                    <a class="nav-link" href="#navbar-example" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-example">
+                        <i class="fas fa-coins text-primary"></i>
+                        <span class="nav-link-text">Sales</span>
                     </a>
+                    <div class="collapse " id="navbar-example">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('SalesPerson.index') }}">
+                                    <!-- <i class="ni ni-single-02 text-primary"></i> --> {{ __('Manage Sales Reps') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <!-- <i class="fa fa-users text-primary"></i> --> {{ __('My Initiatives') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <!-- <i class="fa fa-users-cog text-primary"></i> --> {{ __('My Companies') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('ServicesSubCategory.index') }}">
-                        <i class="fa fa-bars text-primary"></i> {{ __('Services Sub Category') }}
+                    <a class="nav-link" href="#navbar-exampless" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-exampless">
+                        <i class="fas fa-plus-square text-primary"></i>
+                        <span class="nav-link-text">Product Management</span>
                     </a>
+                    <div class="collapse " id="navbar-exampless">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('Services.index') }}">
+                                    <!-- <i class="fa fa-server text-primary"></i> --> {{ __('CSE Services') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <!-- <i class="fa fa-users text-primary"></i> --> {{ __('CSE Hardware') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <!-- <i class="fa fa-users-cog text-primary"></i> --> {{ __('CSE Licenses') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('PaymentTerms.index') }}">
-                        <i class="fa fa-credit-card text-primary"></i> {{ __('Payment Terms') }}
+                    <a class="nav-link" href="#navbar-exampl" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-exampl">
+                        <i class="fa fa-cog text-primary"></i>
+                        <span class="nav-link-text">Settings</span>
                     </a>
+                    <div class="collapse " id="navbar-exampl">
+                        <ul class="nav nav-sm flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('ServicesCategory.index') }}">
+                                    <!-- <i class="fa fa-ellipsis-h text-primary"></i> --> {{ __('Services Category') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('ServicesSubCategory.index') }}">
+                                    <!-- <i class="fa fa-bars text-primary"></i> --> {{ __('Services Sub Category') }}
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('PaymentTerms.index') }}">
+                                    <!-- <i class="fa fa-credit-card text-primary"></i> --> {{ __('Payment Terms') }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Services.index') }}">
-                        <i class="fa fa-server text-primary"></i> {{ __('Services') }}
+                    <a class="nav-link" href="#">
+                        <i class="fa fa-signal text-primary"></i> {{ __('Reports') }}
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Company.index') }}">
-                        <i class="fa fa-building-o text-primary"></i> {{ __('Company') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('Contact.index') }}">
-                        <i class="fa fa-users text-primary"></i> {{ __('Contact') }}
-                    </a>
-                </li>
+                </li>       
             </ul>
             <!-- Divider -->
             <hr class="my-3">
