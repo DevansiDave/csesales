@@ -114,6 +114,11 @@
                         <i class="fa fa-building-o text-primary"></i> {{ __('Company') }}
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('Contact.index') }}">
+                        <i class="fa fa-users text-primary"></i> {{ __('Contact') }}
+                    </a>
+                </li>
             </ul>
             <!-- Divider -->
             <hr class="my-3">

@@ -54,7 +54,7 @@
                             @foreach($Company as $key => $row)
                             <tr>
                                 <td>{{ $Company->firstItem() + $key }}</td>
-                                <td>{{ $row->name }}</td>
+                                <td>{{ $row->company }}</td>
                                 <td style="display: flex;padding-right: 0;padding-left: 0">
                                     <a href="{{ route('Company.edit', $row['id']) }}" class="btn btn-sm btn-primary">
                                         <i class="fa fa-edit"></i>

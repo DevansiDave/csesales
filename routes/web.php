@@ -55,6 +55,8 @@ Route::group(['prefix'=>'admin'], function(){
         Route::resource('Services','App\Http\Controllers\Admin\ServicesController');
         // Company
         Route::resource('Company','App\Http\Controllers\Admin\CompanyController');
+        // Contact
+        Route::resource('Contact','App\Http\Controllers\Admin\ContactController');
     });
 });
 
